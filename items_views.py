@@ -16,7 +16,7 @@ def get_latest_item():
 
 
 @router.get("{item_id}/")
-def get_item(item_id: Annotated[int, Path(ge=1, lt=1_000_000)]): # Annotated список для типизации, Path - для создания доп фильтрации параметра из ссылки ge - больше чем  lt меньше чем
+def get_item(item_id: Annotated[int, Path(ge=1, lt=1_000_000)]): # Annotated список для типизации, Path - говорит о том что атрибут из url и в нем можно укзаать фильтры
     return {
         "item":{
             "item_id": item_id,
