@@ -15,13 +15,7 @@ from core.config import settings
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    try:
-        # Проверим соединение с базой данных
-        async with db_helper.engine.begin() as conn:
-            await conn.run_sync(Base.metadata.create_all)
-            print("Tables created successfully!")
-    except Exception as e:
-        print(f"Error creating tables: {e}")
+    
     yield
 
 
