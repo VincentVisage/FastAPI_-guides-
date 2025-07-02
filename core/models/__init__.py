@@ -5,6 +5,8 @@ __all__ = (
     "User",
     "Post",
     "Profile",
+    "Order",
+    "OrderProductAssociation"
 )
 
 
@@ -14,3 +16,5 @@ from .db_helper import db_helper
 from .user import User
 from .post import Post
 from .profile import Profile
+from .order import Order
+from .order_product_association import OrderProductAssociation
